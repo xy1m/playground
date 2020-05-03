@@ -2,8 +2,10 @@ package com.xy1m.playground.guava.strings;
 
 import com.google.common.base.CharMatcher;
 import com.google.common.base.Splitter;
+import com.google.common.base.Strings;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by gzhenpeng on 2019/3/19
@@ -62,6 +64,9 @@ public class SplitterExpalined {
     }
 
     public static void main(String[] args) {
+        List<String> aa = Splitter.on(",").trimResults().omitEmptyStrings().splitToList(
+                "foo,bar,, qux, "
+        );
         testSplitter();
     }
 }
